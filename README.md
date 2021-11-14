@@ -34,3 +34,23 @@ CTRL + C to stop the server from running
 % git add .
 % git commit -m "setup express server"
 % git push origin master
+5. Add mock data and a Get route
+Add the following code into server.js:
+```
+const mockUserData = [
+    { name: 'Mark' },
+    { name: 'Jill' }
+]
+
+app.get('/users', function (req, res) {
+    res.json({
+        success: true,
+        message: 'successfully got users. Nice!',
+        users: mockUserData
+    })
+})
+```
+Check the result at *http://localhost:8000/users*
+% git add .
+% git commit -m "add first GET route"
+% git push origin master
