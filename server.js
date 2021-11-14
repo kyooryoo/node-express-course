@@ -18,6 +18,17 @@ app.get('/users', function (req, res) {
     })
 })
 
+// crate a dynamic route with passed in param
+app.get('/users/:id',function(req,res){
+	console.log(req.params.id)
+	res.json({
+		success: true,
+		message: 'got one user',
+		user: req.params.id
+	})
+})
+
+
 // make a server by including their name after app.
 app.listen(8000, function () {
     console.log("server is running")
