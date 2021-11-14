@@ -16,5 +16,21 @@ Here is the note for the course.
 2. Install dependencies: npm install
 % npm init -y
 % npm install express --save
-3. Navigate to the root directory
+% git add .
+% git commit -m "initial file setup"
+% git push origin master
+3. Update the server.js file
+```
+import express from 'express';
+const app = express();
+app.listen(8000, function () {
+    console.log("server is running")
+})
+```
 4. Start the server file: node server.js
+% node server.js
+Check the server in browser *http://localhost:8000*
+CTRL + C to stop the server from running 
+% git add .
+% git commit -m "setup express server"
+% git push origin master
